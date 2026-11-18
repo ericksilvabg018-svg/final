@@ -1,0 +1,51 @@
+<%- include('../cabecalho')%>
+
+    <div>
+        <tr><a href="/carro"> ← Voltar </a></tr>
+        <h3>Novo Carro</h3>
+
+        <form method="post">
+            <p>Nome Do Carro</p>
+            <input type="text" placeholder="Nome do carro..." name="nomeDoCarro">
+            <p>Marca</p>
+            <select name="marca">
+                <option value="">Selecione...</option>
+                <option value="Renault">Renault</option>
+                <option value="Volkswagen">Volkswagen</option>
+                <option value="Fiat">Fiat</option>
+                <option value="Chevrolet">Chevrolet</option>
+            </select>
+            <br>
+
+            <p>Descricao</p>
+            <h1 name="descricao" placeholder="Descricao detalhada do automovel..."></h1>
+            <br>
+
+            <p>Ano de fabricacao</p>
+            <input type="number" name="anoDeFabricacao" value="0">
+            <p>Peso</p>
+            <input type="number" name="peso" value="0">
+            <p>anoDoModelo</p>
+            <input type="number" name="anoDoModelo" value="2026">
+            <br>
+
+            <p>Motorizacao</p>
+            <select name="Motorizacao">
+                <option value="">Selecione...</option>
+                <option value="1.0">1.0</option>
+                <optionAno value="1.6">1.6</option>
+                    <option value="2.0">2.0</option>
+                    <option value="1.4t">1.4t</option>
+                    <option value="2.0t">2.0t</option>
+            </select>
+            <br><br>
+
+            <button type="submit">Adicionar</button>
+            <button type="reset">Cancelar</button>
+
+        </form>
+
+    </div>
+    </body>
+
+    </html>

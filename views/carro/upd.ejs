@@ -1,0 +1,40 @@
+<%- include('../cabecalho')%>
+    <div>
+        <tr><a href="/carro"> ← Voltar </a></tr>
+        <h3>alterar novo carro</h3>
+
+        <form method="post">
+            <p>ID</p>
+            <input type="text" name="id" value="<%=carro.id%>" readonly>
+            <br><br>
+            <p>nome do carro</p>
+            <input type="text" name="nome" value="<%=carro.nome%>">
+            <br><br>
+            <p>Marca do carro</p>
+            <input type="text" name="marca" value="<%=carro.marca%>">
+            <br><br>
+            <p>Descricao</p>
+            <input type="text" name="descricao" value="<%=carro.descricao%>">
+            <br><br>
+            <p>Ano de Fabricacao</p>
+            <input type="text" name="anodefabricacao" value="<%=carro.anoDeFabricacao%>">
+            <br><br>
+            <p>Peso</p>
+            <input type="text" name="peso" value="<%=carro.marca%>">
+            <br><br>
+            <select>
+                <option value="">selecione...</option>
+                <option value="">Renault</option>
+                <option value="">Volkswagen</option>
+                <option value="">Fiat</option>
+                <option value="">Chevrolet</option>
+                <option value="">não esta na lista</option>
+            </select>
+            <button type="submit">Adicionar</button>
+            <button type="reset">Cancelar</button>
+        </form>
+    </div>
+
+    </body>
+
+    </html>

@@ -1,0 +1,58 @@
+<%- include('../cabecalho')%>
+
+    <div>
+        <h3>Carros</h3>
+        <p>Gerencie os carros cadastrados no site</p>
+        <a href="carro/add">+ Novo Carro</a><br><br>
+        <form method="post">
+            <input type="text" name="pesquisar" placeholder="Nome do carro">
+            <input type="submit" value="Buscar">
+        </form>
+        <table>
+            <tr>
+                <td>
+                    Nome Do Carro
+                </td>
+                <td>
+                    Marca
+                </td>
+
+                <td>
+                    <h3>Descricao</h3>
+                </td>
+                <td>
+                    <h3>Ano De Fabricacao</h3>
+                </td>
+                <td>
+                    <h3>Peso</h3>
+                </td>
+            </tr>
+            <%carros.forEach(carro=>{%>
+                <tr>
+                    <td>
+                        <%=carro.nomeDoCarro%>
+                    </td>
+                    <td>
+                        <%=carro.marca%>
+                    </td>
+                    <td>
+                        <%=carro.descricao%>
+                    </td>
+                    <td>
+                        <%=carro.anoDeFabricacao%>
+                    </td>
+                    <td>
+                        <%=carro.peso%>
+                    </td>
+                    <td>
+                        <a href="/carro/upd/<%=carro.id%>">✏️</a>
+                        <a href="/carro/del/<%=carro.id%>">🗑️</a>
+                    </td>
+                </tr>
+                <%})%>
+
+        </table>
+    </div>
+    </body>
+
+    </html>

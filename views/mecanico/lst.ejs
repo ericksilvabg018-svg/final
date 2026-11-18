@@ -1,0 +1,47 @@
+<%- include('../cabecalho')%>
+    <div>
+        <h3>Mecanicos</h3>
+        <a href="/mecanico/add"> Novo mecanico</a><br><br>
+        <form method="post">
+ <input type="text" name="pesquisar" placeholder="Nome do mecanico">
+ <input type="submit" value="Buscar">
+</form>
+        <table>
+            <tr>
+                <td>
+                    <h3>Nome</h3>
+                </td>
+
+                <td>
+                    <h3>Idade</h3>
+                </td>
+                <td>
+                    <h3>Experiencia</h3>
+                </td>
+                <td>
+                    <h3>Ações</h3>
+                </td>
+            </tr>
+
+            <% mecanicos.forEach(mecanico=> { %>
+                <tr>
+                    <td>
+                        <%= mecanico.nome %>
+                    </td>
+                    <td>
+                        <%= mecanico.idade%>
+                    </td>
+                    <td>
+                        <%= mecanico.experiencia %>
+                    </td>
+                    <td>
+                        <a href="/mecanico/upd/<%=mecanico.id%>">✏️</a>
+                        <a href="/mecanico/del/<%=mecanico.id%>">🗑️</a>
+                    </td>
+                </tr>
+                <% }) %>
+        </table>
+    </div>
+    </body>
+
+    </html>

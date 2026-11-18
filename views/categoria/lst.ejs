@@ -1,0 +1,49 @@
+<%- include('../cabecalho')%>
+
+    <h3>Categoria de Carros</h3>
+    <p>Gerencie as categorias de carros no site (apenas 2 campos por categoria)</p>
+    <a href="/categoria/add">+ Nova Categoria</a><br><br>
+
+    <form method="post">
+        <input type="text" name="pesquisar" placeholder="Nome da categoria">
+        <input type="submit" value="Buscar">
+
+    </form>
+    <table>
+        <tr>
+            <td>
+                <h3>Nome da Categoria </h3>
+            </td>
+            <td>
+                <h3>Descricao </h3>
+            </td>
+            <td>
+                <h3>foto</h3>
+            </td>
+            <td>
+                <h3>Ação </h3>
+            </td>
+        </tr>
+        <%categorias.forEach(categoria=>{%>
+            <tr>
+                <td>
+                    <p>Volkswagen<%=categoria.nome%>
+                    </p>
+                </td>
+                <td>
+                    <p>Melhor esportivo até 100k<%=categoria.descricao%>
+                    </p>
+                </td>
+                <td><img src="<%=categoria.foto%>" width="150" height="150"></td>
+
+                <td>
+                    <a href="/categoria/upd/<%=categoria.id%>">✏️</a>
+                    <a href="/categoria/del/<%=categoria.id%>">🗑️</a>
+                </td>
+
+            </tr>
+            <%})%>
+    </table>
+    </body>
+
+    </html>
